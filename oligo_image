@@ -2,17 +2,17 @@ FROM r-base
 
 RUN install2.r --error --deps TRUE  Rcpp
 
-RUN install2.r -r http://bioconductor.org/packages/3.0/bioc --deps TRUE
+RUN install2.r -r http://bioconductor.org/packages/3.0/bioc --deps TRUE \
 
-	BiocInstaller
+	BiocInstaller \
 	
-	oligo
+	oligo \
 
-	limma
+	limma \
 
-	annotate
+	annotate \
 
-	hta20transcriptcluster.db
+	hta20transcriptcluster.db \
 
     rm -rf /tmp/downloaded_packages
 
